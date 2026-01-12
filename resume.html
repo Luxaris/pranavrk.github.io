@@ -3,708 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Interactive Resume - Pranav Rajesh Krishnan">
+    <meta name="description" content="Resume - Pranav Rajesh Krishnan">
     <title>Resume | Pranav Rajesh Krishnan</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body class="resume-page">
-    <!-- Particle Canvas Background -->
-    <canvas id="particle-canvas"></canvas>
+<body class="resume-latex-page">
+    <main class="latex-container">
+        <header class="latex-header">
+            <div class="latex-title">Pranav Rajesh Krishnan</div>
+            <div class="latex-subtitle">Physics and Computer Science @ UBC - Simulation Engineer - Space Tech</div>
+            <div class="latex-contact">
+                <a class="latex-link" href="mailto:pranavrajeshkrishnan06@gmail.com">\href{mailto:pranavrajeshkrishnan06@gmail.com}{pranavrajeshkrishnan06@gmail.com}</a> |
+                <a class="latex-link" href="tel:+17787131269">\href{tel:+17787131269}{+1 (778) 713-1269}</a> |
+                <a class="latex-link" href="https://linkedin.com/in/pranav-rk" target="_blank" rel="noopener">\href{https://linkedin.com/in/pranav-rk}{linkedin.com/in/pranav-rk}</a> |
+                Vancouver, BC
+            </div>
+        </header>
 
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+        <div class="latex-rule"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <span class="logo-bracket">{</span>
-                <span class="logo-text">PRK</span>
-                <span class="logo-bracket">}</span>
-            </a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="resume.html" class="nav-link active">Resume</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Resume Header -->
-    <header class="resume-header">
-        <div class="container">
-            <div class="resume-intro">
-                <h1>Pranav Rajesh Krishnan</h1>
-                <p class="resume-tagline">Physics & Computer Science @ UBC | Simulation Engineer | Space Tech Enthusiast</p>
-                <div class="resume-contact-bar">
-                    <a href="mailto:pranavrajeshkrishnan06@gmail.com" class="contact-chip">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        <span>pranavrajeshkrishnan06@gmail.com</span>
-                    </a>
-                    <a href="tel:+17787131269" class="contact-chip">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                        </svg>
-                        <span>+1 (778) 713-1269</span>
-                    </a>
-                    <a href="https://linkedin.com/in/pranav-rk" target="_blank" rel="noopener" class="contact-chip">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                            <rect x="2" y="9" width="4" height="12"/>
-                            <circle cx="4" cy="4" r="2"/>
-                        </svg>
-                        <span>LinkedIn</span>
-                    </a>
+        <section class="latex-section">
+            <div class="latex-section-title">\section*{Education}</div>
+            <div class="latex-entry">
+                <div class="latex-entry-date">2024 - Present</div>
+                <div class="latex-entry-body">
+                    <div class="latex-entry-title">University of British Columbia</div>
+                    <div class="latex-entry-subtitle">Combined Major in Physics and Computer Science</div>
+                    <div class="latex-entry-note">Karen McKellin International Leader of Tomorrow Award (Full-Ride Scholarship)</div>
                 </div>
             </div>
-            <div class="resume-actions">
-                <button class="btn btn-primary" id="download-resume">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                        <polyline points="7 10 12 15 17 10"/>
-                        <line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                    <span>Download PDF</span>
-                </button>
-                <button class="btn btn-secondary" id="print-resume">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="6 9 6 2 18 2 18 9"/>
-                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
-                        <rect x="6" y="14" width="12" height="8"/>
-                    </svg>
-                    <span>Print</span>
-                </button>
+        </section>
+
+        <section class="latex-section">
+            <div class="latex-section-title">\section*{Experience}</div>
+            <div class="latex-entry">
+                <div class="latex-entry-date">Aug 2025 - Present</div>
+                <div class="latex-entry-body">
+                    <div class="latex-entry-title">Simulations Lead, PARSEC R&D</div>
+                    <div class="latex-entry-subtitle">Oceananigans.jl, GLMakie.jl, Julia</div>
+                    <div class="latex-entry-note">Leading simulation workflows for space-technology partners.</div>
+                </div>
             </div>
-        </div>
-    </header>
-
-    <!-- Resume Navigation Tabs -->
-    <div class="resume-nav">
-        <div class="container">
-            <div class="resume-tabs">
-                <button class="tab-btn active" data-tab="timeline">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <polyline points="12 6 12 12 16 14"/>
-                    </svg>
-                    Timeline
-                </button>
-                <button class="tab-btn" data-tab="skills">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                    </svg>
-                    Skills
-                </button>
-                <button class="tab-btn" data-tab="experience">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                    </svg>
-                    Experience
-                </button>
-                <button class="tab-btn" data-tab="education">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                    </svg>
-                    Education
-                </button>
+            <div class="latex-entry">
+                <div class="latex-entry-date">Aug 2025 - Present</div>
+                <div class="latex-entry-body">
+                    <div class="latex-entry-title">Software Developer, UBC Rover</div>
+                    <div class="latex-entry-subtitle">ROS2, MuJoCo, PyTorch, RL</div>
+                    <div class="latex-entry-note">Autonomous rover arm stack for URC/CIRC 2026.</div>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Resume Content -->
-    <main class="resume-content">
-        <div class="container">
-            <!-- Timeline View -->
-            <section class="resume-section active" id="timeline">
-                <div class="interactive-timeline">
-                    <div class="timeline-track">
-                        <div class="timeline-progress"></div>
-                    </div>
-
-                    <div class="timeline-entry" data-year="2025">
-                        <div class="entry-marker">
-                            <span class="marker-year">2025</span>
-                            <div class="marker-dot"></div>
-                        </div>
-                        <div class="entry-cards">
-                            <div class="entry-card" data-category="leadership">
-                                <div class="card-header">
-                                    <span class="card-category">Leadership</span>
-                                    <span class="card-date">Aug 2025 - Present</span>
-                                </div>
-                                <h3>Simulations Lead, PARSEC R&D</h3>
-                                <p>Leading 2-person team developing proprietary simulation models using Oceananigans.jl for fluid dynamics. Managing NDA projects with external partner organizations in space-technology domain.</p>
-                                <div class="card-tags">
-                                    <span>Julia</span>
-                                    <span>Oceananigans.jl</span>
-                                    <span>GLMakie.jl</span>
-                                    <span>Team Lead</span>
-                                </div>
-                            </div>
-                            <div class="entry-card" data-category="robotics">
-                                <div class="card-header">
-                                    <span class="card-category">Robotics</span>
-                                    <span class="card-date">Aug 2025 - Present</span>
-                                </div>
-                                <h3>Software Developer, UBC Rover</h3>
-                                <p>Building autonomous arm stack for 2026 URC/CIRC competition using ROS2, MuJoCo physics simulation, and PyTorch reinforcement learning framework.</p>
-                                <div class="card-tags">
-                                    <span>ROS2</span>
-                                    <span>MuJoCo</span>
-                                    <span>PyTorch</span>
-                                    <span>RL</span>
-                                </div>
-                            </div>
-                            <div class="entry-card" data-category="space">
-                                <div class="card-header">
-                                    <span class="card-category">Space Tech</span>
-                                    <span class="card-date">Aug 2025 - Present</span>
-                                </div>
-                                <h3>Thermal Simulations, UBC Orbit</h3>
-                                <p>Developing ANSYS Thermal models for CubeSat subsystems to predict thermal behavior under orbital and launch cycles using ESA standards.</p>
-                                <div class="card-tags">
-                                    <span>ANSYS</span>
-                                    <span>CubeSat</span>
-                                    <span>Thermal Analysis</span>
-                                </div>
-                            </div>
-                            <div class="entry-card" data-category="space">
-                                <div class="card-header">
-                                    <span class="card-category">Space Tech</span>
-                                    <span class="card-date">Nov 2025 - Present</span>
-                                </div>
-                                <h3>EM Launch System, Olympus Mons Lab</h3>
-                                <p>Derived analytical models for electromagnetic power requirements. Built configurable launch simulation in Julia with BlackBoxOptim.jl velocity optimization.</p>
-                                <div class="card-tags">
-                                    <span>Julia</span>
-                                    <span>StaticArrays.jl</span>
-                                    <span>BlackBoxOptim.jl</span>
-                                </div>
-                            </div>
-                            <div class="entry-card" data-category="project">
-                                <div class="card-header">
-                                    <span class="card-category">Featured Project</span>
-                                    <span class="card-date">Aug 2025 - Present</span>
-                                </div>
-                                <h3>Aegis Active Radiation Shielding</h3>
-                                <p>Developing charged-particle trajectory models using Boris Push algorithms for spacecraft shielding. Testing in satellite due for launch 2027.</p>
-                                <div class="card-tags">
-                                    <span>Julia</span>
-                                    <span>CUDA</span>
-                                    <span>GLMakie</span>
-                                    <span>Magpylib</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-entry" data-year="2024">
-                        <div class="entry-marker">
-                            <span class="marker-year">2024</span>
-                            <div class="marker-dot"></div>
-                        </div>
-                        <div class="entry-cards">
-                            <div class="entry-card" data-category="education">
-                                <div class="card-header">
-                                    <span class="card-category">Education</span>
-                                    <span class="card-date">Sep 2024</span>
-                                </div>
-                                <h3>University of British Columbia</h3>
-                                <p>Combined Major in Physics & Computer Science. Full-Ride Scholarship under the Karen McKellin International Leader of Tomorrow Award.</p>
-                                <div class="card-tags">
-                                    <span>Physics</span>
-                                    <span>Computer Science</span>
-                                    <span>Scholarship</span>
-                                </div>
-                            </div>
-                            <div class="entry-card" data-category="research">
-                                <div class="card-header">
-                                    <span class="card-category">Research</span>
-                                    <span class="card-date">2024</span>
-                                </div>
-                                <h3>QUBE Quantum Network Protocol</h3>
-                                <p>Co-designed quantum network protocol addressing decoherence through entanglement swapping architecture. Presented to 40+ quantum computing experts at Q-SITE conference.</p>
-                                <div class="card-tags">
-                                    <span>Quantum Computing</span>
-                                    <span>Network Protocol</span>
-                                    <span>Q-SITE</span>
-                                </div>
-                            </div>
-                            <div class="entry-card" data-category="research">
-                                <div class="card-header">
-                                    <span class="card-category">Research</span>
-                                    <span class="card-date">2024 - 2025</span>
-                                </div>
-                                <h3>Earthquake Simulation Research</h3>
-                                <p>Developing 4 structural prototype models to predict seismic responses using OpenSeesPy finite element analysis with Prof. Behtash JavidSharifi.</p>
-                                <div class="card-tags">
-                                    <span>OpenSeesPy</span>
-                                    <span>FEA</span>
-                                    <span>Python</span>
-                                </div>
-                            </div>
-                            <div class="entry-card" data-category="leadership">
-                                <div class="card-header">
-                                    <span class="card-category">Leadership</span>
-                                    <span class="card-date">Sep 2024 - May 2025</span>
-                                </div>
-                                <h3>First Year Representative, UBC Physics Society</h3>
-                                <p>Represented 300 first-year students, helped organize events including Stewart Blusson QMI visits.</p>
-                                <div class="card-tags">
-                                    <span>Leadership</span>
-                                    <span>Event Planning</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-entry" data-year="2023">
-                        <div class="entry-marker">
-                            <span class="marker-year">2023</span>
-                            <div class="marker-dot"></div>
-                        </div>
-                        <div class="entry-cards">
-                            <div class="entry-card" data-category="research">
-                                <div class="card-header">
-                                    <span class="card-category">Research</span>
-                                    <span class="card-date">2021 - 2023</span>
-                                </div>
-                                <h3>CO2 Capture Device</h3>
-                                <p>Developed eco-friendly device for converting CO2 to calcium carbonate. 83% cost reduction with 2+ month self-sufficient operation. Published in SCOPUS Indexed Journal.</p>
-                                <div class="card-tags">
-                                    <span>Green Engineering</span>
-                                    <span>Publication</span>
-                                    <span>TCMP-23</span>
-                                </div>
-                            </div>
-                            <div class="entry-card" data-category="project">
-                                <div class="card-header">
-                                    <span class="card-category">Project</span>
-                                    <span class="card-date">2023</span>
-                                </div>
-                                <h3>Object Detection for Self-Driving Cars</h3>
-                                <p>CNN-based object detection using TensorFlow/Keras and VGG-16 architecture during Inspirit AI program led by Stanford/MIT alumni.</p>
-                                <div class="card-tags">
-                                    <span>TensorFlow</span>
-                                    <span>CNN</span>
-                                    <span>Computer Vision</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-entry" data-year="2022">
-                        <div class="entry-marker">
-                            <span class="marker-year">2022</span>
-                            <div class="marker-dot"></div>
-                        </div>
-                        <div class="entry-cards">
-                            <div class="entry-card" data-category="research">
-                                <div class="card-header">
-                                    <span class="card-category">Research Internship</span>
-                                    <span class="card-date">2022</span>
-                                </div>
-                                <h3>Nanoscience Research Intern</h3>
-                                <p>International and Inter-University Centre for Nanoscience and Nanotechnology, Mahatma Gandhi University. Training on laboratory equipment and academic research workflows.</p>
-                                <div class="card-tags">
-                                    <span>Nanomaterials</span>
-                                    <span>Lab Research</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="latex-entry">
+                <div class="latex-entry-date">Aug 2025 - Present</div>
+                <div class="latex-entry-body">
+                    <div class="latex-entry-title">Thermal Simulations, UBC Orbit</div>
+                    <div class="latex-entry-subtitle">ANSYS Thermal, CubeSat, ESA standards</div>
+                    <div class="latex-entry-note">Orbital and launch thermal modeling.</div>
                 </div>
-            </section>
-
-            <!-- Skills View -->
-            <section class="resume-section" id="skills-section">
-                <div class="skills-dashboard">
-                    <div class="skill-radar-container">
-                        <canvas id="skill-radar"></canvas>
-                    </div>
-                    <div class="skills-detail-grid">
-                        <div class="skill-detail-card">
-                            <h3>
-                                <span class="skill-icon">⌨️</span>
-                                Programming Languages
-                            </h3>
-                            <div class="skill-bars">
-                                <div class="skill-bar-item">
-                                    <div class="bar-header">
-                                        <span>Python</span>
-                                        <span>95%</span>
-                                    </div>
-                                    <div class="bar-track">
-                                        <div class="bar-fill" style="--width: 95%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-bar-item">
-                                    <div class="bar-header">
-                                        <span>Julia</span>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="bar-track">
-                                        <div class="bar-fill" style="--width: 90%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-bar-item">
-                                    <div class="bar-header">
-                                        <span>C++</span>
-                                        <span>75%</span>
-                                    </div>
-                                    <div class="bar-track">
-                                        <div class="bar-fill" style="--width: 75%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-bar-item">
-                                    <div class="bar-header">
-                                        <span>JavaScript</span>
-                                        <span>70%</span>
-                                    </div>
-                                    <div class="bar-track">
-                                        <div class="bar-fill" style="--width: 70%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-bar-item">
-                                    <div class="bar-header">
-                                        <span>Java</span>
-                                        <span>65%</span>
-                                    </div>
-                                    <div class="bar-track">
-                                        <div class="bar-fill" style="--width: 65%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-detail-card">
-                            <h3>
-                                <span class="skill-icon">📦</span>
-                                Julia Ecosystem
-                            </h3>
-                            <div class="skill-cloud">
-                                <span class="cloud-tag size-lg">GLMakie.jl</span>
-                                <span class="cloud-tag size-lg">DifferentialEquations.jl</span>
-                                <span class="cloud-tag size-md">ModelingToolkit.jl</span>
-                                <span class="cloud-tag size-md">HTTP.jl</span>
-                                <span class="cloud-tag size-md">BBOptim.jl</span>
-                                <span class="cloud-tag size-sm">Lux.jl</span>
-                                <span class="cloud-tag size-sm">NeuralPDE.jl</span>
-                                <span class="cloud-tag size-md">StaticArrays.jl</span>
-                                <span class="cloud-tag size-md">Oceananigans.jl</span>
-                            </div>
-                        </div>
-                        <div class="skill-detail-card">
-                            <h3>
-                                <span class="skill-icon">🐍</span>
-                                Python Libraries
-                            </h3>
-                            <div class="skill-cloud">
-                                <span class="cloud-tag size-lg">TensorFlow/Keras</span>
-                                <span class="cloud-tag size-lg">NumPy</span>
-                                <span class="cloud-tag size-md">Pandas</span>
-                                <span class="cloud-tag size-md">Magpylib</span>
-                                <span class="cloud-tag size-md">OpenSeesPy</span>
-                                <span class="cloud-tag size-md">PyTorch</span>
-                            </div>
-                        </div>
-                        <div class="skill-detail-card">
-                            <h3>
-                                <span class="skill-icon">🔬</span>
-                                Simulation & Numerical Methods
-                            </h3>
-                            <div class="skill-cloud">
-                                <span class="cloud-tag size-lg">Physics-Informed Neural Networks</span>
-                                <span class="cloud-tag size-lg">Universal Differential Equations</span>
-                                <span class="cloud-tag size-md">Finite Element Analysis</span>
-                                <span class="cloud-tag size-md">Boris Particle Pushing</span>
-                                <span class="cloud-tag size-md">Magnetic Field Computation</span>
-                                <span class="cloud-tag size-sm">ROS2 RL for Robots</span>
-                                <span class="cloud-tag size-sm">MuJoCo</span>
-                            </div>
-                        </div>
-                        <div class="skill-detail-card">
-                            <h3>
-                                <span class="skill-icon">🛠️</span>
-                                Tools & Platforms
-                            </h3>
-                            <div class="skill-cloud">
-                                <span class="cloud-tag size-md">Git</span>
-                                <span class="cloud-tag size-md">ROS2</span>
-                                <span class="cloud-tag size-md">ANSYS Thermal</span>
-                                <span class="cloud-tag size-md">Fusion 360</span>
-                                <span class="cloud-tag size-sm">Ubuntu/Linux</span>
-                                <span class="cloud-tag size-sm">Three.js</span>
-                                <span class="cloud-tag size-sm">CUDA</span>
-                            </div>
-                        </div>
-                        <div class="skill-detail-card">
-                            <h3>
-                                <span class="skill-icon">🗣️</span>
-                                Languages
-                            </h3>
-                            <div class="language-list">
-                                <div class="language-item">
-                                    <span class="lang-name">English</span>
-                                    <span class="lang-level">Fluent</span>
-                                    <div class="lang-dots">
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                    </div>
-                                </div>
-                                <div class="language-item">
-                                    <span class="lang-name">Malayalam</span>
-                                    <span class="lang-level">Native</span>
-                                    <div class="lang-dots">
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                    </div>
-                                </div>
-                                <div class="language-item">
-                                    <span class="lang-name">Hindi</span>
-                                    <span class="lang-level">Proficient</span>
-                                    <div class="lang-dots">
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="latex-entry">
+                <div class="latex-entry-date">Nov 2025 - Present</div>
+                <div class="latex-entry-body">
+                    <div class="latex-entry-title">Electromagnetic Launch System, Olympus Mons Lab</div>
+                    <div class="latex-entry-subtitle">Julia, BlackBoxOptim.jl, GLMakie.jl</div>
+                    <div class="latex-entry-note">Analytical power models and simulation pipeline.</div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Experience View -->
-            <section class="resume-section" id="experience">
-                <div class="experience-grid">
-                    <div class="experience-category">
-                        <h2 class="category-header">
-                            <span class="header-icon">🚀</span>
-                            Current Roles
-                        </h2>
-                        <div class="experience-cards">
-                            <article class="experience-card">
-                                <div class="card-accent"></div>
-                                <div class="card-content">
-                                    <div class="card-meta">
-                                        <span class="org">PARSEC</span>
-                                        <span class="duration">Aug 2025 - Present</span>
-                                    </div>
-                                    <h3>Simulations Lead, R&D Team</h3>
-                                    <ul class="responsibilities">
-                                        <li>Lead two-person team on regular projects and NDA work for partner agency</li>
-                                        <li>Develop proprietary simulation models using Oceananigans.jl</li>
-                                        <li>Process JLD2 time-series output into 3D visualizations using GLMakie.jl</li>
-                                        <li>Maintain repository health and delegate tasks to team members</li>
-                                    </ul>
-                                </div>
-                            </article>
-                            <article class="experience-card">
-                                <div class="card-accent accent-2"></div>
-                                <div class="card-content">
-                                    <div class="card-meta">
-                                        <span class="org">UBC Rover</span>
-                                        <span class="duration">Aug 2025 - Present</span>
-                                    </div>
-                                    <h3>Software Developer, RL & Autonomous Navigation</h3>
-                                    <ul class="responsibilities">
-                                        <li>Building autonomous arm stack for 2026 URC/CIRC competition</li>
-                                        <li>Converting ROS2 URDF models to MuJoCo-compatible format</li>
-                                        <li>Integrating RL agents with sensor fusion</li>
-                                        <li>Collaborating with mechanical and electrical subteams</li>
-                                    </ul>
-                                </div>
-                            </article>
-                            <article class="experience-card">
-                                <div class="card-accent accent-3"></div>
-                                <div class="card-content">
-                                    <div class="card-meta">
-                                        <span class="org">UBC Orbit</span>
-                                        <span class="duration">Aug 2025 - Present</span>
-                                    </div>
-                                    <h3>Thermal Simulations & Payload Testing</h3>
-                                    <ul class="responsibilities">
-                                        <li>Develop ANSYS Thermal models for CubeSat subsystems</li>
-                                        <li>Predict thermal behavior under orbital and launch cycles</li>
-                                        <li>Support payload qualification testing (thermal vacuum)</li>
-                                    </ul>
-                                </div>
-                            </article>
-                            <article class="experience-card">
-                                <div class="card-accent accent-4"></div>
-                                <div class="card-content">
-                                    <div class="card-meta">
-                                        <span class="org">Olympus Mons Laboratory</span>
-                                        <span class="duration">Nov 2025 - Present</span>
-                                    </div>
-                                    <h3>Electromagnetic Launch System</h3>
-                                    <ul class="responsibilities">
-                                        <li>Derived analytical models for EM power requirements</li>
-                                        <li>Built configurable launch simulation in Julia</li>
-                                        <li>Created GLMakie visualization pipeline for investor presentations</li>
-                                    </ul>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="experience-category">
-                        <h2 class="category-header">
-                            <span class="header-icon">🔬</span>
-                            Research Experience
-                        </h2>
-                        <div class="experience-cards">
-                            <article class="experience-card">
-                                <div class="card-accent accent-5"></div>
-                                <div class="card-content">
-                                    <div class="card-meta">
-                                        <span class="org">Mahatma Gandhi University</span>
-                                        <span class="duration">2022</span>
-                                    </div>
-                                    <h3>Research Intern, Nanoscience Centre</h3>
-                                    <ul class="responsibilities">
-                                        <li>Built foundation in nanomaterials research</li>
-                                        <li>Trained on laboratory equipment under postdoctoral mentorship</li>
-                                        <li>Attended international conference and assisted with SCOPUS publication</li>
-                                    </ul>
-                                </div>
-                            </article>
-                            <article class="experience-card">
-                                <div class="card-accent accent-6"></div>
-                                <div class="card-content">
-                                    <div class="card-meta">
-                                        <span class="org">Independent Research</span>
-                                        <span class="duration">2021 - 2023</span>
-                                    </div>
-                                    <h3>CO2 Capture Device</h3>
-                                    <ul class="responsibilities">
-                                        <li>Developed eco-friendly CO2 to calcium carbonate converter</li>
-                                        <li>Achieved 83% cost reduction with 2+ month self-sufficient operation</li>
-                                        <li>Presented at TCMP-23 and published in SCOPUS Indexed Journal</li>
-                                    </ul>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <section class="latex-section">
+            <div class="latex-section-title">\section*{Projects}</div>
+            <div class="latex-hint">Each project is a hover link. Click to open the project subpage.</div>
+            <div class="latex-projects">
+                <a class="latex-link latex-project-link" href="project-aegis.html">\textbf{Aegis Active Radiation Shielding}</a>
+                <a class="latex-link latex-project-link" href="project-rover.html">\textbf{Autonomous Rover Arm with RL}</a>
+                <a class="latex-link latex-project-link" href="project-orbit.html">\textbf{CubeSat Thermal Simulations}</a>
+                <a class="latex-link latex-project-link" href="project-em-launch.html">\textbf{Electromagnetic Launch System}</a>
+                <a class="latex-link latex-project-link" href="project-qube.html">\textbf{QUBE Quantum Network Protocol}</a>
+                <a class="latex-link latex-project-link" href="project-earthquake.html">\textbf{Earthquake Simulation Research}</a>
+                <a class="latex-link latex-project-link" href="project-self-driving.html">\textbf{Object Detection for Self-Driving Cars}</a>
+                <a class="latex-link latex-project-link" href="project-co2-capture.html">\textbf{CO2 Capture Device}</a>
+            </div>
+        </section>
 
-            <!-- Education View -->
-            <section class="resume-section" id="education-section">
-                <div class="education-showcase">
-                    <div class="edu-main">
-                        <div class="university-card">
-                            <div class="uni-logo">
-                                <span>UBC</span>
-                            </div>
-                            <div class="uni-details">
-                                <h2>University of British Columbia</h2>
-                                <p class="location">Vancouver, Canada</p>
-                                <p class="degree">Combined Major in Physics & Computer Science</p>
-                                <p class="timeline">2024 - Present</p>
-                                <div class="scholarship-badge">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="8" r="7"/>
-                                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
-                                    </svg>
-                                    <span>Karen McKellin International Leader of Tomorrow Award</span>
-                                </div>
-                                <p class="scholarship-desc">Full-Ride Scholarship</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="edu-extras">
-                        <div class="extra-card">
-                            <h3>Publications</h3>
-                            <ul class="publication-list">
-                                <li>
-                                    <span class="pub-title">CO2 Capture Device Research</span>
-                                    <span class="pub-venue">Journal of Harbin Engineering University (SCOPUS)</span>
-                                </li>
-                                <li>
-                                    <span class="pub-title">QUBE Quantum Network Protocol</span>
-                                    <span class="pub-venue">Q-SITE Conference 2024</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="extra-card">
-                            <h3>Certifications & Programs</h3>
-                            <ul class="cert-list">
-                                <li>Inspirit AI Program (Stanford/MIT Alumni)</li>
-                                <li>UBC Science Co-op</li>
-                            </ul>
-                        </div>
-                    </div>
+        <section class="latex-section">
+            <div class="latex-section-title">\section*{Research}</div>
+            <div class="latex-entry">
+                <div class="latex-entry-date">2024</div>
+                <div class="latex-entry-body">
+                    <div class="latex-entry-title">QUBE Quantum Network Protocol</div>
+                    <div class="latex-entry-subtitle">Entanglement swapping and decoherence-aware routing</div>
+                    <div class="latex-entry-note">Presented at Q-SITE to 40+ experts.</div>
                 </div>
-            </section>
-        </div>
+            </div>
+            <div class="latex-entry">
+                <div class="latex-entry-date">2024 - 2025</div>
+                <div class="latex-entry-body">
+                    <div class="latex-entry-title">Earthquake Simulation Research</div>
+                    <div class="latex-entry-subtitle">OpenSeesPy, FEA, ground motion modeling</div>
+                    <div class="latex-entry-note">Structural prototypes under seismic loads.</div>
+                </div>
+            </div>
+            <div class="latex-entry">
+                <div class="latex-entry-date">2021 - 2023</div>
+                <div class="latex-entry-body">
+                    <div class="latex-entry-title">CO2 Capture Device</div>
+                    <div class="latex-entry-subtitle">Green engineering, SCOPUS publication</div>
+                    <div class="latex-entry-note">83 percent cost reduction and self-sustaining operation.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latex-section">
+            <div class="latex-section-title">\section*{Skills}</div>
+            <div class="latex-skills">
+                <div><span class="latex-skill-label">\textbf{Languages:}</span> Python, Julia, C++, JavaScript, Java</div>
+                <div><span class="latex-skill-label">\textbf{Simulation:}</span> FEA, Boris Push, Magnetic Field Computation, Thermal Modeling</div>
+                <div><span class="latex-skill-label">\textbf{Tools:}</span> ROS2, MuJoCo, PyTorch, TensorFlow/Keras, OpenSeesPy, ANSYS Thermal</div>
+            </div>
+        </section>
+
+        <footer class="latex-footer">
+            \vspace{4pt} Last updated: 2025
+        </footer>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <span class="logo-bracket">{</span>
-                        <span class="logo-text">PRK</span>
-                        <span class="logo-bracket">}</span>
-                    </a>
-                    <p>Building simulations for the future.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="resume.html">Resume</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="https://github.com/pranavrk" target="_blank" rel="noopener">GitHub</a></li>
-                            <li><a href="https://linkedin.com/in/pranav-rk" target="_blank" rel="noopener">LinkedIn</a></li>
-                            <li><a href="mailto:pranavrajeshkrishnan06@gmail.com">Email</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Pranav Rajesh Krishnan. Built with passion and lots of coffee.</p>
-                <div class="footer-status">
-                    <span class="status-dot"></span>
-                    <span>Vancouver, BC</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/particles.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/resume.js"></script>
 </body>
 </html>
