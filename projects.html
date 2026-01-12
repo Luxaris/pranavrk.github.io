@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects - Pranav Rajesh Krishnan">
+    <title>Projects | Pranav Rajesh Krishnan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="projects-page">
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">PRK</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Projects Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">
+                <span class="title-accent">//</span> Projects
+            </h1>
+            <p class="page-subtitle">
+                From spacecraft radiation shielding to autonomous rovers—here's what I've been building.
+            </p>
+        </div>
+    </header>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <div class="container">
+            <div class="filter-group">
+                <span class="filter-label">Filter by:</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="space">Space Tech</button>
+                    <button class="filter-btn" data-filter="robotics">Robotics</button>
+                    <button class="filter-btn" data-filter="simulation">Simulation</button>
+                    <button class="filter-btn" data-filter="ml">ML/AI</button>
+                    <button class="filter-btn" data-filter="research">Research</button>
+                </div>
+            </div>
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="grid" aria-label="Grid view">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                </button>
+                <button class="view-btn" data-view="list" aria-label="List view">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="8" y1="6" x2="21" y2="6"/>
+                        <line x1="8" y1="12" x2="21" y2="12"/>
+                        <line x1="8" y1="18" x2="21" y2="18"/>
+                        <line x1="3" y1="6" x2="3.01" y2="6"/>
+                        <line x1="3" y1="12" x2="3.01" y2="12"/>
+                        <line x1="3" y1="18" x2="3.01" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <main class="projects-main">
+        <div class="container">
+            <div class="projects-grid" id="projects-grid">
+                <!-- Aegis Project -->
+                <article class="project-card featured" data-categories="space,simulation" id="aegis">
+                    <div class="card-visual">
+                        <div class="visual-bg gradient-space"></div>
+                        <div class="visual-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                            </svg>
+                        </div>
+                        <div class="status-badge active">
+                            <span class="badge-dot"></span>
+                            Active Development
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <span class="project-org">PARSEC</span>
+                            <span class="project-date">Aug 2025 - Present</span>
+                        </div>
+                        <h2>Aegis Active Radiation Shielding</h2>
+                        <p class="project-desc">
+                            Developing charged-particle trajectory models using Boris Push algorithms
+                            for active radiation deflection. Simulating galactic cosmic ray interactions
+                            with magnetic field configurations for spacecraft shielding.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <span class="highlight-icon">🛰️</span>
+                                <span>Satellite launch 2027</span>
+                            </div>
+                            <div class="highlight">
+                                <span class="highlight-icon">⚡</span>
+                                <span>GPU accelerated (CUDA)</span>
+                            </div>
+                            <div class="highlight">
+                                <span class="highlight-icon">🔄</span>
+                                <span>6+ design iterations</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Julia</span>
+                            <span class="tech-tag">CUDA</span>
+                            <span class="tech-tag">GLMakie.jl</span>
+                            <span class="tech-tag">Magpylib</span>
+                            <span class="tech-tag">LinearAlgebra.jl</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- UBC Rover Project -->
+                <article class="project-card" data-categories="robotics,ml,simulation" id="rover">
+                    <div class="card-visual">
+                        <div class="visual-bg gradient-robotics"></div>
+                        <div class="visual-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="11" width="18" height="10" rx="2"/>
+                                <circle cx="7" cy="18" r="2"/>
+                                <circle cx="17" cy="18" r="2"/>
+                                <path d="M14 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5"/>
+                            </svg>
+                        </div>
+                        <div class="status-badge active">
+                            <span class="badge-dot"></span>
+                            Active Development
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <span class="project-org">UBC Rover Team</span>
+                            <span class="project-date">Aug 2025 - Present</span>
+                        </div>
+                        <h2>Autonomous Rover Arm with RL</h2>
+                        <p class="project-desc">
+                            Building autonomous arm stack for the 2026 URC/CIRC competition.
+                            Converting URDF models to MuJoCo format and integrating RL agents
+                            with sensor fusion for field robustness.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">ROS2</span>
+                            <span class="tech-tag">MuJoCo</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Reinforcement Learning</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- UBC Orbit Project -->
+                <article class="project-card" data-categories="space,simulation" id="orbit">
+                    <div class="card-visual">
+                        <div class="visual-bg gradient-thermal"></div>
+                        <div class="visual-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <div class="status-badge active">
+                            <span class="badge-dot"></span>
+                            Active Development
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <span class="project-org">UBC Orbit</span>
+                            <span class="project-date">Aug 2025 - Present</span>
+                        </div>
+                        <h2>CubeSat Thermal Simulations</h2>
+                        <p class="project-desc">
+                            Developing ANSYS Thermal models for CubeSat subsystems to predict
+                            thermal behavior under orbital and launch cycles using ESA standards.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">ANSYS Thermal</span>
+                            <span class="tech-tag">ESA Standards</span>
+                            <span class="tech-tag">Thermal Vacuum</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- EM Launch System -->
+                <article class="project-card" data-categories="space,simulation">
+                    <div class="card-visual">
+                        <div class="visual-bg gradient-launch"></div>
+                        <div class="visual-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                                <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                            </svg>
+                        </div>
+                        <div class="status-badge active">
+                            <span class="badge-dot"></span>
+                            Active Development
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <span class="project-org">Olympus Mons Laboratory</span>
+                            <span class="project-date">Nov 2025 - Present</span>
+                        </div>
+                        <h2>Electromagnetic Launch System</h2>
+                        <p class="project-desc">
+                            Derived analytical models for electromagnetic power requirements in
+                            hybrid railgun-LSM configurations. Built configurable launch simulation
+                            with velocity optimization for orbital delivery prototyping.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Julia</span>
+                            <span class="tech-tag">StaticArrays.jl</span>
+                            <span class="tech-tag">BlackBoxOptim.jl</span>
+                            <span class="tech-tag">GLMakie.jl</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- QUBE Project -->
+                <article class="project-card" data-categories="research" id="qube">
+                    <div class="card-visual">
+                        <div class="visual-bg gradient-quantum"></div>
+                        <div class="visual-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3"/>
+                                <circle cx="12" cy="12" r="8"/>
+                                <line x1="12" y1="2" x2="12" y2="4"/>
+                                <line x1="12" y1="20" x2="12" y2="22"/>
+                                <line x1="2" y1="12" x2="4" y2="12"/>
+                                <line x1="20" y1="12" x2="22" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <span class="project-org">Q-SITE Conference</span>
+                            <span class="project-date">2024</span>
+                        </div>
+                        <h2>QUBE Quantum Network Protocol</h2>
+                        <p class="project-desc">
+                            Co-designed quantum network protocol addressing decoherence through
+                            entanglement swapping architecture. Developed node/routing architecture
+                            and simulation framework. Presented to 40+ quantum computing experts.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Quantum Computing</span>
+                            <span class="tech-tag">Network Design</span>
+                            <span class="tech-tag">Simulation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Earthquake Simulation -->
+                <article class="project-card" data-categories="simulation,research">
+                    <div class="card-visual">
+                        <div class="visual-bg gradient-seismic"></div>
+                        <div class="visual-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <span class="project-org">Research Project</span>
+                            <span class="project-date">2024 - 2025</span>
+                        </div>
+                        <h2>Earthquake Simulation Research</h2>
+                        <p class="project-desc">
+                            Developing 4 structural prototype models to predict seismic responses
+                            using OpenSeesPy finite element analysis. Collaborating with
+                            Prof. Behtash JavidSharifi on ground motion simulation frameworks.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">OpenSeesPy</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FEA</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Self-Driving Car -->
+                <article class="project-card" data-categories="ml">
+                    <div class="card-visual">
+                        <div class="visual-bg gradient-ml"></div>
+                        <div class="visual-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="1" y="3" width="15" height="13" rx="2"/>
+                                <line x1="9" y1="16" x2="9" y2="21"/>
+                                <line x1="5" y1="21" x2="13" y2="21"/>
+                                <circle cx="19" cy="8" r="3"/>
+                                <path d="M18 11.5V21"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <span class="project-org">Inspirit AI</span>
+                            <span class="project-date">2023</span>
+                        </div>
+                        <h2>Object Detection for Self-Driving Cars</h2>
+                        <p class="project-desc">
+                            Developed CNN-based object detection model using TensorFlow/Keras
+                            and VGG-16 architecture. Implemented edge detection and pattern
+                            recognition pipeline for real-time driving scenarios.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">TensorFlow/Keras</span>
+                            <span class="tech-tag">VGG-16</span>
+                            <span class="tech-tag">CNN</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CO2 Capture -->
+                <article class="project-card" data-categories="research">
+                    <div class="card-visual">
+                        <div class="visual-bg gradient-green"></div>
+                        <div class="visual-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <div class="status-badge published">
+                            <span class="badge-dot"></span>
+                            Published
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <span class="project-org">Independent Research</span>
+                            <span class="project-date">2021 - 2023</span>
+                        </div>
+                        <h2>CO2 Capture Device</h2>
+                        <p class="project-desc">
+                            Developed eco-friendly device for converting CO2 emissions into
+                            usable calcium carbonate. Achieved 83% cost reduction with 2+ month
+                            self-sufficient operation. Published in SCOPUS Indexed Journal.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <span class="highlight-icon">📉</span>
+                                <span>83% cost reduction</span>
+                            </div>
+                            <div class="highlight">
+                                <span class="highlight-icon">📄</span>
+                                <span>SCOPUS publication</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Green Engineering</span>
+                            <span class="tech-tag">Chemistry</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Coming Soon Section -->
+            <div class="coming-soon-section">
+                <h2>More Projects Coming Soon</h2>
+                <p>I'm always working on something new. Check back for updates or follow me on GitHub.</p>
+                <a href="https://github.com/pranavrk" target="_blank" rel="noopener" class="btn btn-outline">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Follow on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-bracket">{</span>
+                        <span class="logo-text">PRK</span>
+                        <span class="logo-bracket">}</span>
+                    </a>
+                    <p>Building simulations for the future.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/pranavrk" target="_blank" rel="noopener">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/pranav-rk" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="mailto:pranavrajeshkrishnan06@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pranav Rajesh Krishnan. Built with passion and lots of coffee.</p>
+                <div class="footer-status">
+                    <span class="status-dot"></span>
+                    <span>Vancouver, BC</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>
