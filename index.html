@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pranav Rajesh Krishnan - Physics & Computer Science student at UBC, specializing in simulations, space technology, and computational physics.">
+    <title>Pranav Rajesh Krishnan | Physics & CS @ UBC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">PRK</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Available for Research Collaborations</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">
+                    <span class="word" style="--delay: 0">Hi,</span>
+                    <span class="word" style="--delay: 1">I'm</span>
+                </span>
+                <span class="title-line name-line">
+                    <span class="word highlight glitch" data-text="Pranav" style="--delay: 2">Pranav</span>
+                </span>
+            </h1>
+            <div class="hero-roles">
+                <span class="role-prefix">></span>
+                <span class="typing-text" id="typing-text"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Physics & Computer Science student at <span class="highlight-text">UBC</span>,
+                building simulations for <span class="highlight-text">space technology</span>,
+                <span class="highlight-text">quantum networks</span>, and
+                <span class="highlight-text">autonomous systems</span>.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="6">0</span>
+                    <span class="stat-label">Active Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Research Teams</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="2">0</span>
+                    <span class="stat-label">Publications</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="resume.html" class="btn btn-secondary">
+                    <span>Interactive Resume</span>
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="orbit-container">
+                <div class="orbit orbit-1">
+                    <div class="orbit-dot" style="--angle: 0deg;"><span>Julia</span></div>
+                    <div class="orbit-dot" style="--angle: 120deg;"><span>Python</span></div>
+                    <div class="orbit-dot" style="--angle: 240deg;"><span>C++</span></div>
+                </div>
+                <div class="orbit orbit-2">
+                    <div class="orbit-dot" style="--angle: 60deg;"><span>ROS2</span></div>
+                    <div class="orbit-dot" style="--angle: 180deg;"><span>CUDA</span></div>
+                    <div class="orbit-dot" style="--angle: 300deg;"><span>ML</span></div>
+                </div>
+                <div class="orbit-center">
+                    <div class="center-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// About</span>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card about-intro">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>The Short Version</h3>
+                    <p>
+                        I'm a <strong>Karen McKellin International Leader of Tomorrow Scholar</strong>
+                        at UBC, pursuing a combined major in Physics and Computer Science. I build
+                        simulations that push the boundaries of what's possible in space tech and
+                        autonomous systems.
+                    </p>
+                </div>
+                <div class="about-card about-current">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3>Currently Building</h3>
+                    <ul class="current-list">
+                        <li>
+                            <span class="list-icon">🛰️</span>
+                            <span>Active radiation shielding for spacecraft @ PARSEC</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">🤖</span>
+                            <span>Autonomous rover arm with RL @ UBC Rover</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">🌡️</span>
+                            <span>CubeSat thermal simulations @ UBC Orbit</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">🚀</span>
+                            <span>Electromagnetic launch systems @ Olympus Mons Lab</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-card about-philosophy">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h3>My Approach</h3>
+                    <p>
+                        I believe in <strong>simulation-first design</strong>—building digital twins
+                        before physical prototypes. This methodology has helped me optimize everything
+                        from magnetic shielding configurations to electromagnetic launchers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Skills</span>
+                <h2 class="section-title">Tech Stack</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <span class="category-icon">⌨️</span>
+                        Languages
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="95">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="90">
+                            <span class="skill-name">Julia</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="75">
+                            <span class="skill-name">C++</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="70">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="65">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <span class="category-icon">🔬</span>
+                        Simulation & Numerics
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Physics-Informed Neural Networks</span>
+                        <span class="skill-tag">Universal Differential Equations</span>
+                        <span class="skill-tag">Finite Element Analysis</span>
+                        <span class="skill-tag">Boris Particle Pushing</span>
+                        <span class="skill-tag">Magnetic Field Computation</span>
+                        <span class="skill-tag">OpenSeesPy</span>
+                        <span class="skill-tag">Oceananigans.jl</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <span class="category-icon">🛠️</span>
+                        Tools & Frameworks
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ROS2</span>
+                        <span class="skill-tag">MuJoCo</span>
+                        <span class="skill-tag">TensorFlow/Keras</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">GLMakie.jl</span>
+                        <span class="skill-tag">Three.js</span>
+                        <span class="skill-tag">ANSYS Thermal</span>
+                        <span class="skill-tag">Fusion 360</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CUDA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="featured" class="section featured">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Featured</span>
+                <h2 class="section-title">Highlighted Work</h2>
+            </div>
+            <div class="featured-grid">
+                <article class="featured-card large">
+                    <div class="card-bg">
+                        <div class="card-gradient"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag tag-space">Space Tech</span>
+                            <span class="tag tag-active">Active</span>
+                        </div>
+                        <h3>Aegis Active Radiation Shielding</h3>
+                        <p>
+                            Developing charged-particle trajectory models using Boris Push algorithms
+                            for active radiation deflection. Simulating galactic cosmic ray interactions
+                            with magnetic field configurations for spacecraft shielding—testing in a
+                            satellite due for launch in 2027.
+                        </p>
+                        <div class="card-tech">
+                            <span>Julia</span>
+                            <span>CUDA</span>
+                            <span>GLMakie</span>
+                            <span>Magpylib</span>
+                        </div>
+                        <a href="projects.html#aegis" class="card-link">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                <article class="featured-card">
+                    <div class="card-bg">
+                        <div class="card-gradient gradient-2"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag tag-robotics">Robotics</span>
+                            <span class="tag tag-active">Active</span>
+                        </div>
+                        <h3>UBC Rover Autonomous Arm</h3>
+                        <p>
+                            Building autonomous arm stack for URC/CIRC 2026 using ROS2,
+                            MuJoCo physics simulation, and PyTorch reinforcement learning.
+                        </p>
+                        <div class="card-tech">
+                            <span>ROS2</span>
+                            <span>MuJoCo</span>
+                            <span>PyTorch</span>
+                        </div>
+                        <a href="projects.html#rover" class="card-link">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                <article class="featured-card">
+                    <div class="card-bg">
+                        <div class="card-gradient gradient-3"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag tag-quantum">Quantum</span>
+                        </div>
+                        <h3>QUBE Quantum Network Protocol</h3>
+                        <p>
+                            Co-designed quantum network protocol addressing decoherence through
+                            entanglement swapping architecture. Presented to 40+ experts at Q-SITE.
+                        </p>
+                        <div class="card-tech">
+                            <span>Quantum Computing</span>
+                            <span>Network Design</span>
+                        </div>
+                        <a href="projects.html#qube" class="card-link">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <div class="featured-cta">
+                <a href="projects.html" class="btn btn-outline">
+                    View All Projects
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Preview -->
+    <section id="timeline-preview" class="section timeline-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Journey</span>
+                <h2 class="section-title">My Path So Far</h2>
+            </div>
+            <div class="timeline-items">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Started at UBC</h3>
+                        <p>Full-ride scholarship under the Karen McKellin International Leader of Tomorrow Award</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>QUBE Protocol @ Q-SITE</h3>
+                        <p>Presented quantum network protocol to 40+ experts including Xanadu leaders</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Joined Multiple Research Teams</h3>
+                        <p>PARSEC, UBC Rover, UBC Orbit, Olympus Mons Laboratory</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-cta">
+                <a href="resume.html" class="btn btn-secondary">
+                    <span>Explore Full Timeline</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section id="contact-cta" class="section contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Let's Build Something <span class="highlight">Extraordinary</span></h2>
+                <p>
+                    Whether you're working on space tech, autonomous systems, or cutting-edge
+                    simulations—I'd love to collaborate.
+                </p>
+                <div class="cta-buttons">
+                    <a href="mailto:pranavrajeshkrishnan06@gmail.com" class="btn btn-primary btn-large">
+                        <span>Get in Touch</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">View All Contacts</a>
+                </div>
+            </div>
+            <div class="cta-decoration">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-bracket">{</span>
+                        <span class="logo-text">PRK</span>
+                        <span class="logo-bracket">}</span>
+                    </a>
+                    <p>Building simulations for the future.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="resume.html">Resume</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/pranavrk" target="_blank" rel="noopener">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/pranav-rk" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="mailto:pranavrajeshkrishnan06@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pranav Rajesh Krishnan. Built with passion and lots of coffee.</p>
+                <div class="footer-status">
+                    <span class="status-dot"></span>
+                    <span>Vancouver, BC</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
