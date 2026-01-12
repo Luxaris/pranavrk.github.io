@@ -105,21 +105,20 @@ body {
     color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: none;
 }
 
-/* Hide default cursor on desktop */
-@media (pointer: fine) {
-    * {
+/* Custom cursor only on devices that support it */
+@media (hover: hover) and (pointer: fine) {
+    body.custom-cursor-enabled {
+        cursor: none;
+    }
+    body.custom-cursor-enabled * {
         cursor: none !important;
     }
 }
 
-/* Show cursor on mobile */
+/* Always show cursor on touch devices */
 @media (pointer: coarse) {
-    body {
-        cursor: auto;
-    }
     .cursor, .cursor-follower {
         display: none !important;
     }
@@ -144,7 +143,7 @@ button {
     font-family: inherit;
     border: none;
     background: none;
-    cursor: none;
+    cursor: pointer;
 }
 
 input, textarea, select {
