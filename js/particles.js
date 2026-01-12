@@ -65,7 +65,8 @@ class ParticleSystem {
 
                 if (distance < maxDistance) {
                     const opacity = 1 - (distance / maxDistance);
-                    this.ctx.strokeStyle = `rgba(99, 102, 241, ${opacity * 0.3})`;
+                    // Navy/white theme - subtle white connections
+                    this.ctx.strokeStyle = `rgba(107, 157, 195, ${opacity * 0.25})`;
                     this.ctx.lineWidth = 0.5;
                     this.ctx.beginPath();
                     this.ctx.moveTo(this.particles[a].x, this.particles[a].y);
@@ -102,11 +103,12 @@ class Particle {
     }
 
     getRandomColor() {
+        // Physics research aesthetic - subtle whites and light blues
         const colors = [
-            'rgba(99, 102, 241, 0.8)',   // Primary
-            'rgba(139, 92, 246, 0.8)',    // Purple
-            'rgba(34, 211, 238, 0.6)',    // Accent
-            'rgba(248, 250, 252, 0.5)'    // White
+            'rgba(255, 255, 255, 0.6)',   // White (primary)
+            'rgba(232, 244, 252, 0.5)',   // Light blue-white
+            'rgba(107, 157, 195, 0.5)',   // Muted accent blue
+            'rgba(184, 201, 217, 0.4)'    // Soft gray-blue
         ];
         return colors[Math.floor(Math.random() * colors.length)];
     }
