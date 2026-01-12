@@ -557,32 +557,6 @@ input, textarea, select {
     font-weight: 500;
 }
 
-.hero-stats {
-    display: flex;
-    gap: var(--space-8);
-    margin-bottom: var(--space-8);
-    padding: var(--space-6) 0;
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat-number {
-    display: block;
-    font-size: var(--text-3xl);
-    font-weight: 700;
-    color: var(--color-primary);
-    font-family: var(--font-mono);
-}
-
-.stat-label {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-}
-
 .hero-buttons {
     display: flex;
     gap: var(--space-4);
@@ -2664,10 +2638,6 @@ input, textarea, select {
         height: 280px;
     }
 
-    .hero-stats {
-        justify-content: center;
-    }
-
     .hero-buttons {
         justify-content: center;
     }
@@ -2819,11 +2789,6 @@ input, textarea, select {
 }
 
 @media (max-width: 480px) {
-    .hero-stats {
-        flex-direction: column;
-        gap: var(--space-4);
-    }
-
     .hero-buttons {
         flex-direction: column;
     }
